@@ -11,7 +11,6 @@ const App = () => {
     <div className={ css.wrapper }>
       <Profile />
       <Statistics />
-      {/* <Statistics title={ 'Upload stats' } /> */}
 			<FriendList />
       <TransactionHistory/>
 		</div>
