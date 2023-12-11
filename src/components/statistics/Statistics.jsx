@@ -2,7 +2,7 @@ import data from '../../assets/data.json'
 import css from './Statistics.module.css'
 
 
-export const Statistics = () => {
+export const Statistics = ({ title }) => {
 
     const getRandomHexColor = () => {
         return `#${Math.floor(Math.random() * 16777215)
@@ -19,8 +19,8 @@ export const Statistics = () => {
         ))
     }
 
-    return <section className={ css.statistics }>
-        <h2 className={ css.title }>Upload stats</h2>
+    return <section className={css.statistics}>
+        { title && <h2 className={css.title}>{ title }</h2> }
 
         <ul className={ css.statList }>
             <List stats={ data } />
